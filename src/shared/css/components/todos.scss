@@ -1,0 +1,111 @@
+div.todos_container {
+    margin: 0 auto;
+    padding: 3rem 0;
+    section.all_todos_list {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 2.5rem;
+        > div:first-of-type {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: space-around;
+            font-size: 2rem;
+            padding: 1rem 0;
+            color: #d9e4da;
+            text-shadow: 0 0.2rem 0.5rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+            border-bottom: 0.3rem double darken($color: $maincolor, $amount: 20%);
+            > span {
+                flex-basis: 49.5%;
+                text-align: center;
+                &:first-of-type {
+                    border-right: 0.1rem solid#000;
+                    padding-right: 2.5rem;
+                    > .svg-inline--fa,
+                    > span {color: #da8305} 
+                }
+                &:last-of-type {
+                    border-left: 0.1rem solid#000;
+                    > .svg-inline--fa,
+                    > span {color: #3eb93e}
+                }
+            }
+        }
+        div:nth-of-type(2), 
+        div:last-of-type {
+            width: 47%;
+            text-align: center;
+            border-radius: 1rem;
+            box-shadow: 0.3rem 0.3rem 3rem rgba(255,255,255,.1), 
+                        -0.3rem -0.3rem 3rem rgba(255,255,255,.1);
+            min-height: 14rem;
+            align-self: flex-start;
+            background: rgba(0,0,0,.1);
+            font-family: 'Comic Neue', cursive;
+            > button {
+                width: 23%;
+                color: $maincolor;
+                font-size: 2rem;
+                margin-top: 1rem;
+                border: 0.1rem solid $maincolor;
+                border-radius: 2rem;
+                padding: 0.5rem 0;
+                cursor: pointer;
+                &:hover {
+                    box-shadow: 0 0 0.7rem lighten($color: $maincolor, $amount: 20%) inset, 
+                                -0 -0 0.7rem lighten($color: $maincolor, $amount: 20%) inset;
+                    border-color: lighten($color: $maincolor, $amount: 20%);
+                    color: red;
+                    > span {color: red}
+                }
+                &[disabled],
+                &[disabled] > span,
+                &[disabled] > .svg-inline--fa, {
+                    color: $darkgray;
+                    border-color: $darkgray;
+                    cursor: not-allowed;
+                    &:hover {box-shadow: none}
+                }
+                span {color: $maincolor}
+            }
+            p {
+                color: #fbbbbb;
+                margin: 3rem 0 2rem;
+                font-size: 2rem;
+                font-style: italic;
+                text-shadow: 0.2rem 0.2rem 0.4rem;
+            }
+            ul {
+                margin: 2rem 0;
+                padding: 0 2rem;
+                li {
+                    display: flex;
+                    padding: 0.6rem;
+                    border-bottom: 0.1rem solid $darkgray;
+                    align-items: center;
+                    letter-spacing: 0.04rem;
+                    @include trans(padding);
+                    > span {
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        text-transform: capitalize;
+                        font-style: italic;
+                        color: #c3f3ec;
+                        text-align: left;
+                        word-break: break-all;
+                        flex-basis: 69%;
+                        margin-right: 17%
+                    }
+                    &:last-of-type {border: none}
+                    > button {
+                        color: #da8305;
+                        font-size: 2rem;
+                        &:last-of-type {color: red}
+                    }
+                }
+            }
+        }
+    }
+}

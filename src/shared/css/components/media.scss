@@ -1,0 +1,161 @@
+@media screen and (max-width: 1200px) {
+    div.todos_container form {
+        input {border-bottom-width: 0.13rem}
+        button {font-size: 3rem}
+        p.err_msg {
+            font-size: 1.25rem;
+            border-radius: 0.4rem;
+            padding: 0.8rem 0.5rem 0.5rem;
+            border-bottom-width: 0.2rem;
+            width: 87%
+        }
+    }
+
+    div.todos_container section.all_todos_list {
+        div:nth-of-type(2),
+        div:last-of-type {
+            width: 48%;
+            min-height: 13.7rem;
+            > button {width: 27%;font-size: 1.8rem}
+            p {font-size: 1.7rem}
+            ul li > span {flex-basis: 83%;margin-right: 7%}
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    body {padding: 8.5rem 0 3rem}
+    ::-webkit-input-placeholder {font-size: 1rem}
+    ::-moz-placeholder {font-size: 1rem}
+    :-moz-placeholder {font-size: 1rem}
+    :-ms-input-placeholder {font-size: 1rem}
+
+    header {
+        padding: 1.6rem 0;
+        div.container {
+            h1 {font-size: 3rem}
+            > span {font-size: 1.3rem;padding: 0.5rem}
+        }
+    }
+
+    div.todos_container section.all_todos_list {
+        > div:first-of-type {font-size: 1.8rem;margin-bottom: 1.5rem}
+        div:nth-of-type(2), 
+        div:last-of-type {
+            min-height: 10.4rem;
+            > button {font-size: 1.6rem}
+            p {font-size: 1.5rem;margin: 2.5rem 0 2rem}
+            ul {
+                margin: 1rem 0;
+                padding: 0 1.5rem;
+                li {
+                    padding: 0.1rem 0.3rem;
+                    > span {font-size: 1.4rem;flex-basis: 82%;margin-right: 6%}
+                    > button {font-size: 1.7rem}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {padding: 6.5rem 0 3rem}
+
+    header {
+        padding: 1.3rem 0;
+        div.container {
+            h1 {
+                font-size: 2.7rem;
+                .svg-inline--fa.fa-w-16 {margin-right: 0.7rem;font-size: 1.7rem}
+            }
+            > span {letter-spacing: 0.02rem;padding: 0.3rem 0.4rem}
+        }
+    }
+
+    div.todos_container form {
+        width: 75%;
+        min-height: 6rem;
+        input {
+            border-bottom-width: 0.1rem;
+            padding: 0.5rem 1.5rem 0.5rem;
+            font-size: 1.5rem;
+            flex-basis: 85%;
+            max-height: 3rem
+        }
+        button {max-height: 3rem}
+        p.err_msg {
+            font-size: 1rem;
+            border-radius: 0.3rem;
+            margin: 0.7rem auto 0;
+            padding: 0.5rem;
+            border-bottom-width: 0.1rem
+        }
+    }
+
+    div.todos_container {
+        padding: 4rem 0;
+        section.all_todos_list {
+            > div:first-of-type {
+                font-size: 1.6rem;
+                padding: 0.8rem 0;
+                margin-bottom: 1.3rem;
+                border-bottom-width: 0.2rem
+            }
+            div:nth-of-type(2), 
+            div:last-of-type {
+                border-radius: 0.5rem;
+                min-height: 9.7rem;
+                > button {font-size: 1.3rem;margin-top: 0.7rem;border-radius: 0.7rem}
+                p {font-size: 1.5rem}
+                ul {
+                    padding: 0 1rem;
+                    li {
+                        > span {font-size: 1.2rem;flex-basis: 77%}
+                        > button {font-size: 1.2rem}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {padding: 5rem 0 3rem}
+
+    header {
+        padding: 1rem 0;
+        div.container {
+            h1 {
+                font-size: 2.2rem;
+                .svg-inline--fa.fa-w-16 {margin-right: 0.5rem;font-size: 1.4rem}
+            }
+            > span {font-size: 1.1rem}
+        }
+    }
+
+    div.todos_container form {
+        width: 87%;
+        min-height: 5.5rem;
+        input {padding: 0.5rem 1rem 0.3rem;font-size: 1.2rem;max-height: 2.5rem}
+        button {max-height: 2.5rem;font-size: 2.5rem}
+        p.err_msg {font-size: 0.9rem;margin: 0.5rem auto 0}
+    }
+
+    div.todos_container section.all_todos_list {
+        margin-top: 2rem;
+        justify-content: space-between;
+        > div:first-of-type {font-size: 1.3rem;padding: 0.6rem 0;margin-bottom: 1rem}
+        div:nth-of-type(2), 
+        div:last-of-type {
+            width: 49%;
+            min-height: 9.3rem;
+            > button {font-size: 1.1rem;margin-top: 0.5rem;border-radius: 0.5rem}
+            p {font-size: 1.3rem;margin: 2.5rem 0 2rem}
+            ul li {
+                padding: 0.1rem;
+                > span {font-size: 1.1rem;margin-right: 6%}
+                > button {font-size: 1.1rem}
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+div.todos_container form {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 8rem;
+    margin: 0 auto;
+    input {
+        color: $maincolor;
+        border: none;
+        border-bottom: 0.2rem solid #f3f16f;
+        background: transparent;
+        padding: 1rem 2rem 0.5rem;
+        font-size: 1.8rem;
+        font-style: italic;
+        flex-basis: 87%;
+        max-height: 3.7rem;
+    }
+    button {
+        color: $maincolor;
+        flex-grow: 1;
+        font-size: 3.5rem;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        max-height: 3.7rem;
+        > .svg-inline--fa:hover {transform: scale(1.1)}
+    }
+    p.err_msg {
+        color: #23031c;
+        font-size: 1.42rem;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        width: 74%;
+        text-align: center;
+        margin: 1rem auto 0;
+        padding: 0.5rem;
+        text-shadow: 0.1rem 0.1rem 0.8rem;
+        letter-spacing: 0.03rem;
+        font-style: italic;
+        border-bottom: 0.3rem solid #f3f16f;
+        animation: lightening 1s linear 5 both
+    }
+    @keyframes lightening {
+        0%,100% {background: #ffebd6}
+        50% {background: lighten($color: $maincolor, $amount: 20%)}
+    }
+}

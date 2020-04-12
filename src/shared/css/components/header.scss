@@ -1,0 +1,39 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url(../images/header/header1.jpg) no-repeat fixed;
+    background-size: cover;
+    padding: 2rem 0;
+    background-position: 0 16%;
+    color: white;
+    box-shadow: 0 0 0.9rem 0.6rem #080c1b;
+    z-index: 2;
+    div.container {
+        h1 {
+            font-size: 3.5rem;
+            animation: pulsingHeader 3s linear infinite both;
+            .svg-inline--fa.fa-w-16 {
+                margin-right: 1rem;
+                font-size: 2rem;
+                color: $maincolor;
+                vertical-align: 0.2rem;
+                @include trans()
+            }
+            > span {color: $maincolor;text-transform: uppercase;font-style: oblique}
+        }
+        > span {
+            color: #ffffffc2;
+            font-size: 1.5rem;
+            letter-spacing: 0.05rem;
+            display: inline-block;
+            padding: 0.5rem 0.2rem;
+            font-style: italic
+        }
+    }
+    @keyframes pulsingHeader {
+        0%,100% {text-shadow: 0 0.1rem 0.1rem #fdd996}
+        50% {text-shadow: 0 0.1rem 0.4rem #fdd996}
+    }
+}

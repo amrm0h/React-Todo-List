@@ -1,0 +1,75 @@
+
+/* mixin for transition */
+@mixin  trans ($p:all, $t:0.3s,$ease:ease-in-out){
+    transition: $p $t $ease;
+}
+
+/* Variables */
+/* colors vars */
+$maincolor: #fa8c0e;
+$darkgray: darken(#ffffffc2, 30%);
+
+
+/* General Styles */
+
+@font-face {
+    src: url(../fonts/Roboto/Roboto-Black.ttf) format(ttf);
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    src: url(../fonts/Comic_Neue/ComicNeue-Regular.ttf) format(ttf);
+    font-family: 'Comic Neue', cursive;
+}
+
+
+* {box-sizing: border-box}
+
+html {font-size: 10px;height: 100%}
+
+body {
+    min-height: 100%;
+    position: relative;
+    background: url("../images/body/bg1.jpg") no-repeat fixed;
+    background-size: cover;
+    background-position: 0 25%;
+    font-family: 'Roboto', sans-serif;
+    padding: 10.7rem 0 3rem;
+    overflow-y: scroll;
+    @include trans()
+}
+
+.container {width: 90%;max-width: 110rem;margin: auto}
+
+/* overlay style*/
+div.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(8, 8, 8, 0.8);
+    width: 100%;
+    z-index: -1
+}
+
+h1,h2,p {margin: 0}
+
+input,button {outline: none}
+button {
+    background: transparent;
+    padding: 1rem;
+    border: none;
+    @include trans();
+    .svg-inline--fa {cursor: pointer;@include trans()}
+}
+
+ul {list-style: none;margin: 0;padding: 0}
+
+div,section,span,p,ul,form,input,header,h1 {@include trans()}
+
+/* placeholder */
+
+::-webkit-input-placeholder {font-size: 1.2rem;color: gray}
+::-moz-placeholder {font-size: 1.2rem;color: gray}
+:-moz-placeholder {font-size: 1.2rem;color: gray}
+:-ms-input-placeholder {font-size: 1.2rem;color: gray}
