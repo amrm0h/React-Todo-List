@@ -12,12 +12,13 @@ const Form = (props) => {
                 e.preventDefault();
                 const inputValue = e.target.elements.todo.value.trim();
 
+
                 if ( inputValue === "" ) {
                     setError("Please Write Valid Todo to add ...!!!");
                 } else if ( props.not_done_todos.includes(inputValue.toLowerCase()) ) {
                     setError("Already Added before, Please Write New one to add ...!!!");
                 } else {
-                    props.hanldeOnSubmit(inputValue);
+                    props.hanldeOnSubmit(inputValue.toLowerCase());
                     setError("");
                 }
                 e.target.elements.todo.value = "";
